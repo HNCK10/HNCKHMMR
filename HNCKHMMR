@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.2;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+
+/// @custom:security-contact lancehancockac1@gmail.com
+contract HancockSHammer is ERC20 {
+    constructor() public ERC20("Hancock's Hammer","HHMR") {
+        _mint(msg.sender, 100 * (10 ** uint256(decimals())));
+    }
+}
